@@ -1,8 +1,24 @@
 import { ObjectId, type OptionalId } from 'mongodb'
 
 export type UserModel = OptionalId<{
-    name: string,
-    age: number,
+    nombre: string,
     email: string,
-    books: ObjectId[]
+    telefono: string
+    amigos: ObjectId[]
 }>
+
+
+export type User = {
+    id: string,
+    nombre: string,
+    email: string,
+    telefono: string
+    amigos: Friend[]
+}
+
+export type Friend = {
+    id: string, 
+    nombre: string,
+    email: string,
+    telefono: string
+}
